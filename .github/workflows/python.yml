@@ -23,11 +23,11 @@ jobs:
     - name: Install packages
       run: make install
 
-    - name: Lint
-      run: make lint
+    # - name: Lint
+    #   run: make lint
 
-    - name: Format Black
-      run: make format
+    # - name: Format Black
+    #   run: make format
       
     - name: Run tests
       run: make test

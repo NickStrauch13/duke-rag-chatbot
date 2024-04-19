@@ -1,9 +1,12 @@
+[![CI](https://github.com/NickStrauch13/duke-rag-chatbot/actions/workflows/python.yml/badge.svg)](https://github.com/NickStrauch13/duke-rag-chatbot/actions/workflows/python.yml)
+
 # Duke AI Master's RAG Chatbot
 
 <p align="center">
     <img src="./data/Duke_University_seal.png" width="200">
 </p>
 
+This project will be hosted on Azure until 4/21/24. The link to the chatbot is [here](https://duke-aipi-chatbot.azurewebsites.net/).
 ## Project Description
 This chatbot leverages a Mistral 7B large language model (LLM) that has been instruction fine-tuned to specifically address queries and provide detailed information about the Duke AIPI MEng Masters program. Utilizing the technique of Retrieval-Augmented Generation (RAG), the platform dynamically interacts with a comprehensive and curated corpus of the program's documentation. This advanced method allows the system to retrieve the most pertinent and current information from the corpus, augmenting the language model's responses to ensure they are both accurate and contextually relevant.
 
@@ -16,6 +19,9 @@ This chatbot leverages a Mistral 7B large language model (LLM) that has been ins
 
 This integration of fine-tuned language modeling with retrieval-augmented generation techniques ensures that users not only receive generalized answers but also responses that are deeply rooted in the specific factual content of the Duke AIPI MEng Masters program.
 
+<p align="center">
+    <img src="./data/app_ex.png" width="700">
+</p>
 
 ## Technical Details
 
