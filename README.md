@@ -32,6 +32,22 @@ Model hosted on [Huggingface](https://huggingface.co/mkeohane01/mistral-instruct
 ### Retrieval-Augmented Generation (RAG)
 Retrieval-Augmented Generation enhances the capabilities the language model by combining it with a retrieval system. In the platform, RAG involves the language model querying a retriever component that searches a pre-built corpus containing detailed information about the Duke AIPI MEng program. The retriever fetches the most relevant documents or snippets of information, which are then fed back into the language model. This combination allows the model to generate responses that are not only contextually aware but also deeply informed by the specific data contained in the program’s corpus.
 
+### Evaluation
+The RAG system’s performance metrics are compared to the base Mistral 7B model (pre-finetuning). These metric scores were calculated from the average performance on the questions below using human evaluation.
+
+**Metrics**: (Score rated on a scale of 1-10)
+- `Relevance`: How relevant is the response to the input prompt?
+- `Accuracy`: How correct is all of the information provided in the response?
+- `Informativeness`: How informative or useful is the response?
+- `Specificity`: How detailed is the response? 
+- `Clarity`: How clear and understandable is the response?
+
+|                | Relevance | Accuracy | Informativeness | Specificity | Clarity     |
+|----------------|-----------|----------|-----------------|-------------|-------------|
+| Base Model     | 2.182     | 1.307    | 1.926           | 4.816       | 5.881       |
+| RAG System     | 9.130     | 8.223    | 7.131           | 6.659       | 7.917       |
+| Δ              | 6.948     | 6.916    | 5.205           | 1.843       | 2.036       |
+
 
 ## Getting Started
 
@@ -42,7 +58,8 @@ The run the application locally, follow these steps:
 2. Create a virtual python environment using `python -m venv venv`.
 3. Activate the virtual environment using `source venv/bin/activate` for mac/linux or `venv\Scripts\activate` for windows.
 4. Install the project requirements using `pip install -r requirements.txt`.
-5. Run the application from the root directory using `python .src/app/app.py`.
+5. Request the required API keys at njs35@duke.edu and place them in a `.env` file in the root directory.
+6. Run the application from the root directory using `python .src/app/app.py`.
 
 ## Project Structure
 
