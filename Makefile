@@ -1,12 +1,14 @@
 install:
-	pip install -r requirements.txt
-
-lint:
-	pylint your_python_module.py
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
 test:
-	python -m unittest discover
+	pytest -vv --cov=scripts
 
-run:
-	python your_script.py
+format:	
+	black scripts/*.py
 
+lint:
+	ruff check scripts/*.py
+
+all: install lint format test

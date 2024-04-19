@@ -12,7 +12,7 @@ def cosine_similarity(v1, v2):
 
 #function that returns answer if the cosine similarity is greater than 0.5
 def get_similar_chunks(query_embedding, top_n=3, threshold=0.87):
-    with open('data/questions_embedded.jsonl', 'r') as file:
+    with open('./data/questions_embedded.jsonl', 'r') as file:
         similarities = {}
         for line in file:
             data = json.loads(line)
